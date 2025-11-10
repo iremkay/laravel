@@ -15,4 +15,4 @@ Route::get('/hello/{name}/info', function ($name){
     return 'Hello,' . $name . '!!!';
 });
 
-Route::get('/temp',[TeempController::class, 'tmpFunction']);
+Route::get('/temp',[TempController::class, 'tmpFunction']);
