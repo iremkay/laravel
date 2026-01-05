@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Food extends Model
 {
-    //
+protected $guarded = ['id'];
+    public function Meal() {
+        return $this->hasMany(Food::class);
+    }
 }

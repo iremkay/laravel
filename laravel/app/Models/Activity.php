@@ -3,19 +3,15 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\customer;
-use App\Models\Exercise;
 
 class Activity extends Model
 {
-    public function users(){
-        return $this->belongsToMany(Customer::class);
+protected $guarded = ['id'];
+    public function customer () {
+        return $this->belongsTo(Customer::class);
     }
-}
 
-class Activity extends Model
-{
-    public function customers(){
-        return $this->hasMany(Exercise::class);
+    public function exercise () {
+        return $this->belongsTo(Exercise::class);
     }
 }

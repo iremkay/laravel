@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('activities', function (Blueprint $table) {
             $table->id();
+            $table->integer('customer_id');
+            $table->integer('exercise_id');
             $table->timestamps();
         });
     }
